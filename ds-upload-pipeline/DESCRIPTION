@@ -1,0 +1,8 @@
+Package: DataProcessingPipeline
+Title: Data Processing Pipeline
+Version: 0.1.0
+Authors@R: person("Stuart", "Wheater", email = "stuart.wheater@arjuna.com", role = c("cre", "aut"))
+Description: Support for configuring and deploying a data processing pipeline for loading, processing and storing data
+Depends: R (>= 4.3)
+Imports: rjson, readr, R6
+License: LGPL-3
