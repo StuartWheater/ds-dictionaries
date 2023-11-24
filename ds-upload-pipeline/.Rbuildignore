@@ -1,2 +1,3 @@
 ^.*\.Rproj$
 ^config.json$
+^\.Rproj\.user$
