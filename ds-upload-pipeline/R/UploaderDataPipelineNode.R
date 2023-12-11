@@ -6,6 +6,8 @@
 #' @details
 #' TODO
 #'
+#' @export
+#'
 
 UploaderDataPipelineNode <- R6Class("UploaderDataPipelineNode",
     inherit = DataPipelineNode,

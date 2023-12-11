@@ -5,7 +5,9 @@
 #' 
 #' @details
 #' TODO
-#' 
+#'
+#' @export
+#'
 
 .loadAndValidateConfig <- function(configFilename)
 {
@@ -17,10 +19,10 @@
 .buildDataPipelineNode <- function(config)
 {
     dataPipeline <- switch (config$type,
-       LoaderDataPipelineNode    = LoaderDataPipelineNode$new(config$name, config$config),
-       ValidaterDataPipelineNode = ValidaterDataPipelineNode$new(config$name, config$config),
-       UploaderDataPipelineNode  = UploaderDataPipelineNode$new(config$name, config$config),
-       stop("Unknown data pipeline node type", call. = FALSE)
+        LoaderDataPipelineNode    = LoaderDataPipelineNode$new(config$name, config$config),
+        ValidaterDataPipelineNode = ValidaterDataPipelineNode$new(config$name, config$config),
+        UploaderDataPipelineNode  = UploaderDataPipelineNode$new(config$name, config$config),
+        stop("Unknown data pipeline node type", call. = FALSE)
     )
     return(dataPipeline)
 }
@@ -40,7 +42,7 @@ dataPipelineBuilder <- function()
     config       <- .loadAndValidateConfig(configFilename)
     dataPipeline <- .buildDataPipeline(config)
 
-    data <- data.frame(a = c(1, 2, 3, 4, 5, 6), b = c(4, 5, 6, 1, 2, 3), b = c(0, 1, 2, 3, 4, 5), d = c(4, 5, 6, 0, 1, 3))
+    data <- NULL
 
     for (node in dataPipeline)
     {

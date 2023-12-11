@@ -5,7 +5,9 @@
 #'
 #' @details
 #' TODO
-#' 
+#'
+#' @export
+#'
 
 LoaderDataPipelineNode <- R6Class("LoaderDataPipelineNode",
     inherit = DataPipelineNode,
@@ -22,6 +24,10 @@ LoaderDataPipelineNode <- R6Class("LoaderDataPipelineNode",
         processData = function(data)
         {
             cat("LoaderDataPipelineNode::processData\n")
+
+            csvFilename <- private$config$filename
+
+            data <- readr::read_csv(csvFilename)
 
             invisible(data)
         }

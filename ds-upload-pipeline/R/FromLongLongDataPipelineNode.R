@@ -1,7 +1,7 @@
 #'
-#' @title Validater Data Pipeline Node R6Class
+#' @title From 'long long' Data Pipeline Node R6Class
 #' 
-#' @description `ValidaterDataPipelineNode` is an R6Class which support the validating of data which passes to the `processData` function by the previous node in the pipeline.
+#' @description `FromLongLongDataPipelineNode` is an R6Class which support the conversion from 'long long' format of data which passes to the `processData` function by the previous node in the pipeline.
 #' 
 #' @details
 #' TODO
@@ -10,7 +10,7 @@
 #'
 
 
-ValidaterDataPipelineNode <- R6Class("ValidaterDataPipelineNode",
+FromLongLongDataPipelineNode <- R6Class("FromLongLongDataPipelineNode",
     inherit = DataPipelineNode,
 
     public = list
@@ -24,7 +24,7 @@ ValidaterDataPipelineNode <- R6Class("ValidaterDataPipelineNode",
 
         processData = function(data)
         {
-            cat("ValidaterDataPipelineNode::processData\n")
+            cat("FromLongLongDataPipelineNode::processData\n")
 
             invisible(data)
         }

@@ -3,6 +3,8 @@
 #'
 #' `DataPipelineNode` is an R6Class which support the generic methods for managing a pipeline.
 #'
+#' @export
+#'
 
 DataPipelineNode <- R6Class("DataPipelineNode",
     public = list
