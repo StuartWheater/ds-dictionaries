@@ -9,7 +9,6 @@
 #' @export
 #'
 
-
 ValidaterDataPipelineNode <- R6Class("ValidaterDataPipelineNode",
     inherit = DataPipelineNode,
 
@@ -24,8 +23,6 @@ ValidaterDataPipelineNode <- R6Class("ValidaterDataPipelineNode",
 
         processData = function(data)
         {
-            cat("ValidaterDataPipelineNode::processData\n")
-
             invisible(data)
         }
     ),

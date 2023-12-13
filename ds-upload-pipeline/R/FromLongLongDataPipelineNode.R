@@ -9,7 +9,6 @@
 #' @export
 #'
 
-
 FromLongLongDataPipelineNode <- R6Class("FromLongLongDataPipelineNode",
     inherit = DataPipelineNode,
 
@@ -24,9 +23,23 @@ FromLongLongDataPipelineNode <- R6Class("FromLongLongDataPipelineNode",
 
         processData = function(data)
         {
-            cat("FromLongLongDataPipelineNode::processData\n")
+            columnNameColumnName = private$config$columnNameColumnName
+            rowNameColumnName    = private$config$rowNameColumnName
+            valueColumnName      = private$config$valueColumnName
 
-            invisible(data)
+            results <- data.frame()
+            for (index in 1:nrow(data))
+            {
+                row <- data[index,]
+
+                columnName <- toString(row[columnNameColumnName])
+                rowName    <- toString(row[rowNameColumnName])
+                value      <- toString(row[valueColumnName])
+
+                cat("<<<<", columnName, rowName, value, ">>>>\n", sep = " ")
+            }
+
+            invisible(results)
         }
     ),
 

@@ -23,8 +23,6 @@ UploaderDataPipelineNode <- R6Class("UploaderDataPipelineNode",
 
         processData = function(data)
         {
-            cat("UploaderDataPipelineNode::processData\n")
-
             invisible(data)
         }
     ),

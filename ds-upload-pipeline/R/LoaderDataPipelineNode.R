@@ -23,11 +23,9 @@ LoaderDataPipelineNode <- R6Class("LoaderDataPipelineNode",
 
         processData = function(data)
         {
-            cat("LoaderDataPipelineNode::processData\n")
+            tsvFilename <- private$config$filename
 
-            csvFilename <- private$config$filename
-
-            data <- readr::read_csv(csvFilename)
+            data <- readr::read_tsv(tsvFilename, col_names = TRUE, show_col_types = FALSE)
 
             invisible(data)
         }

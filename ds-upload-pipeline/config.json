@@ -1,5 +1,9 @@
 [
-    { "name": "Node1", "type": "LoaderDataPipelineNode", "config": { "filename": "./data.csv"} },
-    { "name": "Node2", "type": "ValidaterDataPipelineNode", "config": {} },
-    { "name": "Node3", "type": "UploaderDataPipelineNode", "config": {} }
+    { "name": "Node1", "type": "LoaderDataPipelineNode", "config": { "filename": "./data.csv" } },
+    { "name": "Node2", "type": "SummaryDataPipelineNode", "config": {} },
+    { "name": "Node3", "type": "ValidaterDataPipelineNode", "config": {} },
+    { "name": "Node4", "type": "FromLongLongDataPipelineNode", "config": { "columnNameColumnName": "variable", "rowNameColumnName": "id", "valueColumnName": "measure" } },
+    { "name": "Node5", "type": "SummaryDataPipelineNode", "config": {} },
+    { "name": "Node6", "type": "ValidaterDataPipelineNode", "config": {} },
+    { "name": "Node7", "type": "UploaderDataPipelineNode", "config": {} }
 ]

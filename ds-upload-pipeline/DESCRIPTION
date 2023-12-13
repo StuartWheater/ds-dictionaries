@@ -3,7 +3,11 @@ Title: Data Processing Pipeline
 Version: 0.1.0
 Authors@R: person("Stuart", "Wheater", email = "stuart.wheater@arjuna.com", role = c("cre", "aut"))
 Description: Support for configuring and deploying a data processing pipeline for loading, processing and storing data.
-Depends: R (>= 4.3), rjson (>= 0.2.21), readr (>= 2.1.4), R6 (>= 2.5.1)
+Depends:
+    R (>= 4.3),
+    rjson (>= 0.2.21),
+    readr (>= 2.1.4),
+    R6 (>= 2.5.1)
 License: LGPL-3
 RoxygenNote: 7.2.3
 Encoding: UTF-8
