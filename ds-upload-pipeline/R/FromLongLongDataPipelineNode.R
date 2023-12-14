@@ -36,7 +36,7 @@ FromLongLongDataPipelineNode <- R6Class("FromLongLongDataPipelineNode",
                 rowName    <- toString(row[rowNameColumnName])
                 value      <- toString(row[valueColumnName])
 
-                cat("<<<<", columnName, rowName, value, ">>>>\n", sep = " ")
+                results[rowName, columnName] <- value
             }
 
             invisible(results)

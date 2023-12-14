@@ -23,6 +23,33 @@ UploaderDataPipelineNode <- R6Class("UploaderDataPipelineNode",
 
         processData = function(data)
         {
+            armadilloURL = private$config$armadilloURL
+            username     = private$config$username
+            password     = private$config$password
+            projectName  = private$config$projectName
+            folderName   = private$config$folderName
+            tableName    = private$config$tableName
+
+            tryCatch(
+                {
+                    MolgenisArmadillo::armadillo.login_basic(armadillo = armadilloURL, username = username, password = password)
+                    
+                    MolgenisArmadillo::armadillo.upload_table(projectName, folderName, data, tableName)
+                },
+                error = function(error)
+                {
+                    message("Error: Connecting to Armadillo Server")
+                    print(error)
+                    stop("Error connecting to Armadillo Server", call. = FALSE)
+                },
+                warning = function(warning)
+                {
+                    message("Warning: Connecting to Armadillo Server")
+                    print(warning)
+                    return(NA)
+                }
+            )
+
             invisible(data)
         }
     ),

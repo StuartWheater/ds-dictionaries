@@ -25,7 +25,7 @@ SummaryDataPipelineNode <- R6Class("SummaryDataPipelineNode",
         {
             cat("Summary:\n")
             cat("\tSummary: ", summary(data), "\n", sep = "")
-            cat("\tColumn Names: \"", colnames(data), "\"\n", sep = "")
+            cat("\tColumn Names:\"", colnames(data), "\"\n", sep = " ")
             cat("\tLength:", nrow(data), "\n", sep = " ")
             cat("\tClass(s):", class(data), "\n", sep = " ")
 
