@@ -14,7 +14,8 @@ dataPipelineBuilder <- function()
     cat("Starting\n")
 
 #    configFilename <- "config.json"
-    configFilename <- "config_alt.json"
+#    configFilename <- "config_alt.json"
+    configFilename <- "longitools_config.json"
     #    base::commandArgs(trailingOnly = TRUE)
 
     config       <- .loadAndValidateConfig(configFilename)

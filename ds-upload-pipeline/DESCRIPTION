@@ -7,6 +7,7 @@ Depends:
     R (>= 4.3),
     rjson (>= 0.2.21),
     readr (>= 2.1.4),
+    stringi (>= 1.8.3),
     R6 (>= 2.5.1),
     MolgenisArmadillo (>= 2.3.0)
 License: LGPL-3
