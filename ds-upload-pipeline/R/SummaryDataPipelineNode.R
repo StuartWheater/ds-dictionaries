@@ -18,7 +18,7 @@ SummaryDataPipelineNode <- R6Class("SummaryDataPipelineNode",
         {
             super$initialize(name)
 
-            private$config = config
+            private$config <- config
         },
 
         processData = function(data)

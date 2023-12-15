@@ -18,17 +18,17 @@ UploaderDataPipelineNode <- R6Class("UploaderDataPipelineNode",
         {
             super$initialize(name)
 
-            private$config = config
+            private$config <- config
         },
 
         processData = function(data)
         {
-            armadilloURL = private$config$armadilloURL
-            username     = private$config$username
-            password     = private$config$password
-            projectName  = private$config$projectName
-            folderName   = private$config$folderName
-            tableName    = private$config$tableName
+            armadilloURL <- private$config$armadilloURL
+            username     <- private$config$username
+            password     <- private$config$password
+            projectName  <- private$config$projectName
+            folderName   <- private$config$folderName
+            tableName    <- private$config$tableName
 
             tryCatch(
                 {

@@ -18,14 +18,14 @@ FromLongLongDataPipelineNode <- R6Class("FromLongLongDataPipelineNode",
         {
             super$initialize(name)
 
-            private$config = config
+            private$config <- config
         },
 
         processData = function(data)
         {
-            columnNameColumnName = private$config$columnNameColumnName
-            rowNameColumnName    = private$config$rowNameColumnName
-            valueColumnName      = private$config$valueColumnName
+            columnNameColumnName <- private$config$columnNameColumnName
+            rowNameColumnName    <- private$config$rowNameColumnName
+            valueColumnName      <- private$config$valueColumnName
 
             results <- data.frame()
             for (index in 1:nrow(data))

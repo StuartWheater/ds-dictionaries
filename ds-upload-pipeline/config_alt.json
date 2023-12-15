@@ -1,0 +1,33 @@
+[
+    { "name": "Node1", "type": "LoaderDataPipelineNode",
+        "config": { "filename": "./data.csv" }
+    },
+    { "name": "Node2", "type": "ValidaterDataPipelineNode",
+        "config":
+        {
+            "columnSpecs":
+            [
+                {
+                    "columnNamePattern": "^id$",
+                    "valuePattern":      "^*$"
+                },
+                {
+                    "columnNamePattern": "^variable$",
+                    "valuePattern":      "^*$"
+                },
+                {
+                    "columnNamePattern": "^measure$",
+                    "valuePattern":      "^*$"
+                },
+                {
+                    "columnNamePattern": "^age$",
+                    "valuePattern":      "^*$"
+                },
+                {
+                    "columnNamePattern": "^method$",
+                    "valuePattern":      "^*$"
+                }
+            ]
+        }
+    }
+]

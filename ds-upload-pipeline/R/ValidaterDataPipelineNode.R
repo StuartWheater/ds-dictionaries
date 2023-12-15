@@ -18,11 +18,34 @@ ValidaterDataPipelineNode <- R6Class("ValidaterDataPipelineNode",
         {
             super$initialize(name)
 
-            private$config = config
+            private$config <- config
         },
 
         processData = function(data)
         {
+            columnSpecs <- private$config$columnSpecs
+
+            for (columnName in colnames(data))
+            {
+                matchingColumnNamePattern <- FALSE
+                for (index in 1:length(columnSpecs))
+                {
+                    columnSpec <- columnSpecs[[index]]
+
+                    columnNamePattern <- columnSpec$columnNamePattern[1]
+                    
+                    if (! is.na(stringi::stri_extract(str = columnName, regex = columnNamePattern)))
+                    {
+                        valuePattern <- columnSpec$valuePattern[1]
+
+                        matchingColumnNamePattern <- TRUE
+                    }
+                }
+
+                if (! matchingColumnNamePattern)
+                    stop(paste("Unable to find a pattern matching column name \"", columnName, "\"", sep = ""), call. = FALSE)
+            }
+
             invisible(data)
         }
     ),

@@ -13,9 +13,10 @@ dataPipelineBuilder <- function()
 {
     cat("Starting\n")
 
-    configFilename <- "config.json"
+#    configFilename <- "config.json"
+    configFilename <- "config_alt.json"
     #    base::commandArgs(trailingOnly = TRUE)
-    
+
     config       <- .loadAndValidateConfig(configFilename)
     dataPipeline <- .buildDataPipeline(config)
     
@@ -32,7 +33,7 @@ dataPipelineBuilder <- function()
 
 .loadAndValidateConfig <- function(configFilename)
 {
-    config = rjson::fromJSON(file = configFilename)
+    config <- rjson::fromJSON(file = configFilename)
 
     return(config)
 }

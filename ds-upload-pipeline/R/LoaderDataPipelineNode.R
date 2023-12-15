@@ -18,7 +18,7 @@ LoaderDataPipelineNode <- R6Class("LoaderDataPipelineNode",
         {
             super$initialize(name)
 
-            private$config = config
+            private$config <- config
         },
 
         processData = function(data)
