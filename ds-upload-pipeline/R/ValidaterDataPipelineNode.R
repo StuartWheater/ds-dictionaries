@@ -30,13 +30,17 @@ ValidaterDataPipelineNode <- R6Class("ValidaterDataPipelineNode",
                 matchingColumnNamePattern <- FALSE
                 for (index in 1:length(columnSpecs))
                 {
-                    columnSpec <- columnSpecs[[index]]
-
+                    columnSpec        <- columnSpecs[[index]]
                     columnNamePattern <- columnSpec$columnNamePattern[1]
-                    
-                    if (! is.na(stringi::stri_extract(str = columnName, regex = columnNamePattern)))
+
+                    if (stringi::stri_detect(str = columnName, regex = columnNamePattern))
                     {
                         valuePattern <- columnSpec$valuePattern[1]
+
+                        valueMismatches <- unique(setdiff(data[[columnName]], stringi::stri_match(str = data[[columnName]], regex = valuePattern)))
+
+                        if (length(valueMismatches) != 0)
+                            stop("Value pattern mismatche(s) in column \"", columnName, "\": \"", paste0(valueMismatches, sep = ", "), "\"", call. = FALSE)
 
                         matchingColumnNamePattern <- TRUE
                     }
