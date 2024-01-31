@@ -32,8 +32,10 @@ UploaderDataPipelineNode <- R6Class("UploaderDataPipelineNode",
 
             tryCatch(
                 {
-                    MolgenisArmadillo::armadillo.login_basic(armadillo = armadilloURL, username = username, password = password)
-                    
+                    if (is.character(username) && (nchar(username) > 0) && is.character(password) && (nchar(password) > 0))
+                        MolgenisArmadillo::armadillo.login_basic(armadillo = armadilloURL, username = username, password = password)
+                    else
+                        MolgenisArmadillo::armadillo.login(armadillo = armadilloURL)
                     MolgenisArmadillo::armadillo.upload_table(projectName, folderName, data, tableName)
                 },
                 error = function(error)
