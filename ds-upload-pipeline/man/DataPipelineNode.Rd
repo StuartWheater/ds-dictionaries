@@ -4,6 +4,11 @@
 \alias{DataPipelineNode}
 \title{Data Pipeline Node R6Class}
 \description{
+Data Pipeline Node R6Class
+
+Data Pipeline Node R6Class
+}
+\details{
 `DataPipelineNode` is an R6Class which support the generic methods for managing a pipeline.
 }
 \section{Methods}{
@@ -19,28 +24,52 @@
 \if{html}{\out{<a id="method-DataPipelineNode-new"></a>}}
 \if{latex}{\out{\hypertarget{method-DataPipelineNode-new}{}}}
 \subsection{Method \code{new()}}{
+Initialize the object
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DataPipelineNode$new(name)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{name}}{name of node}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-DataPipelineNode-print"></a>}}
 \if{latex}{\out{\hypertarget{method-DataPipelineNode-print}{}}}
 \subsection{Method \code{print()}}{
+Print the object
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DataPipelineNode$print()}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{name}}{name of node}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-DataPipelineNode-processData"></a>}}
 \if{latex}{\out{\hypertarget{method-DataPipelineNode-processData}{}}}
 \subsection{Method \code{processData()}}{
+Process data
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DataPipelineNode$processData(data)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{data}}{data to be processed}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-DataPipelineNode-clone"></a>}}

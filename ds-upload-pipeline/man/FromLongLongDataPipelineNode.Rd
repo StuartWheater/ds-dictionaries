@@ -31,19 +31,37 @@ TODO
 \if{html}{\out{<a id="method-FromLongLongDataPipelineNode-new"></a>}}
 \if{latex}{\out{\hypertarget{method-FromLongLongDataPipelineNode-new}{}}}
 \subsection{Method \code{new()}}{
+Initialize the object
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FromLongLongDataPipelineNode$new(name, config)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{name}}{name of node}
+
+\item{\code{config}}{config of node}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-FromLongLongDataPipelineNode-processData"></a>}}
 \if{latex}{\out{\hypertarget{method-FromLongLongDataPipelineNode-processData}{}}}
 \subsection{Method \code{processData()}}{
+Process data
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FromLongLongDataPipelineNode$processData(data)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{data}}{data to be processed}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-FromLongLongDataPipelineNode-clone"></a>}}

@@ -6,6 +6,8 @@
 #' @details
 #' TODO
 #'
+#' @import MolgenisArmadillo
+#'
 #' @export
 #'
 
@@ -14,6 +16,10 @@ UploaderDataPipelineNode <- R6Class("UploaderDataPipelineNode",
 
     public = list
     (
+        #' @description
+        #' Initialize the object
+        #' @param name name of node
+        #' @param config config of node
         initialize = function(name, config)
         {
             super$initialize(name)
@@ -21,6 +27,9 @@ UploaderDataPipelineNode <- R6Class("UploaderDataPipelineNode",
             private$config <- config
         },
 
+        #' @description
+        #' Process data
+        #' @param data data to be processed
         processData = function(data)
         {
             armadilloURL <- private$config$armadilloURL

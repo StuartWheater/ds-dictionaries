@@ -14,6 +14,10 @@ SummaryDataPipelineNode <- R6Class("SummaryDataPipelineNode",
 
     public = list
     (
+        #' @description 
+        #' Initialize the object
+        #' @param name name of node
+        #' @param config config of node
         initialize = function(name, config)
         {
             super$initialize(name)
@@ -21,6 +25,9 @@ SummaryDataPipelineNode <- R6Class("SummaryDataPipelineNode",
             private$config <- config
         },
 
+        #' @description 
+        #' Process data
+        #' @param data data to be processed
         processData = function(data)
         {
             cat("Summary:\n")

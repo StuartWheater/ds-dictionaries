@@ -6,6 +6,8 @@
 #' @details
 #' TODO
 #'
+#' @import readr
+#'
 #' @export
 #'
 
@@ -14,6 +16,10 @@ LoaderDataPipelineNode <- R6Class("LoaderDataPipelineNode",
 
     public = list
     (
+        #' @description 
+        #' Initialize the object
+        #' @param name name of node
+        #' @param config config of node
         initialize = function(name, config)
         {
             super$initialize(name)
@@ -21,6 +27,9 @@ LoaderDataPipelineNode <- R6Class("LoaderDataPipelineNode",
             private$config <- config
         },
 
+        #' @description 
+        #' Process data
+        #' @param data data to be processed
         processData = function(data)
         {
             tsvFilename <- private$config$filename

@@ -31,19 +31,37 @@ TODO
 \if{html}{\out{<a id="method-UploaderDataPipelineNode-new"></a>}}
 \if{latex}{\out{\hypertarget{method-UploaderDataPipelineNode-new}{}}}
 \subsection{Method \code{new()}}{
+Initialize the object
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{UploaderDataPipelineNode$new(name, config)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{name}}{name of node}
+
+\item{\code{config}}{config of node}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-UploaderDataPipelineNode-processData"></a>}}
 \if{latex}{\out{\hypertarget{method-UploaderDataPipelineNode-processData}{}}}
 \subsection{Method \code{processData()}}{
+Process data
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{UploaderDataPipelineNode$processData(data)}\if{html}{\out{</div>}}
 }
 
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{data}}{data to be processed}
+}
+\if{html}{\out{</div>}}
+}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-UploaderDataPipelineNode-clone"></a>}}

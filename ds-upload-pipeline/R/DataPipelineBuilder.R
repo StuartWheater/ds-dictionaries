@@ -6,6 +6,8 @@
 #' @details
 #' TODO
 #'
+#' @import rjson
+#'
 #' @export
 #'
 
@@ -13,10 +15,11 @@ dataPipelineBuilder <- function()
 {
     cat("Starting\n")
 
-#    configFilename <- "config.json"
-#    configFilename <- "config_alt.json"
-    configFilename <- "longitools_config.json"
-    #    base::commandArgs(trailingOnly = TRUE)
+#    configFilename <- "pipeline_configs/config.json"
+#    configFilename <- "pipeline_configs/config_alt.json"
+#    configFilename <- "pipeline_configs/longitools_config.json"
+    configFilename <- "test_config.json"
+#    base::commandArgs(trailingOnly = TRUE)
 
     config       <- .loadAndValidateConfig(configFilename)
     dataPipeline <- .buildDataPipeline(config)
@@ -56,4 +59,3 @@ dataPipelineBuilder <- function()
 {
     return(lapply(config, .buildDataPipelineNode))
 }
-

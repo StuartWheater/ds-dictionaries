@@ -1,0 +1,370 @@
+[
+    { "name": "Node1", "type": "LoaderDataPipelineNode",
+        "config": { "filename": "./data.csv" }
+    },
+    { "name": "Node2", "type": "SummaryDataPipelineNode", "config": {} },
+    { "name": "Node3", "type": "ValidaterDataPipelineNode",
+        "config":
+        {
+            "columnSpecs":
+            [
+                {
+                    "columnNamePattern": "^id$",
+                    "valuePattern":      "^[0-9]{1,3}$"
+                },
+                {
+                    "columnNamePattern": "^variable$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^measure$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^age$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^method$",
+                    "valuePattern":      "^.*$"
+                }
+            ]
+        }
+    },
+    { "name": "Node4", "type": "FromLongLongDataPipelineNode",
+        "config":
+        {
+            "columnNameColumnName": "variable",
+            "rowNameColumnName":    "id",
+            "valueColumnName":      "measure"
+        }
+    },
+    { "name": "Node5", "type": "SummaryDataPipelineNode", "config": {} },
+    { "name": "Node6", "type": "ValidaterDataPipelineNode",
+        "config":
+        {
+            "columnSpecs":
+            [
+                {
+                    "columnNamePattern": "^edu_m_$",
+                    "valuePattern":      "^[123]$"
+                },
+                {
+                    "columnNamePattern": "^cohab_$",
+                    "valuePattern":      "^[12]$"
+                },
+                {
+                    "columnNamePattern": "^occup_f1_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^occup_m_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^death$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^weight_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^height_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^alc$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^smk_curr$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^smk_ever$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^alc_unit$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^chd_ap$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^chd_broad$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^diab_t2_sr$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^diet_fish$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^diet_fruit$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^diet_swebev$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^diet_veg$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^edu$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^famsize_adult_own$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^famsize_child_own$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^hhincome_own$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^hypertension$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^hypertension_med$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^pa_mod_vig$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^smk_cess$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^smk_cig$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^visits_dentist$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^visits_gp$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^visits_nurse$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^visits_range$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^visits_specialist$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^drugs_a$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^drugs_b$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^sedentary_time$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^chol_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^crp_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^dbp_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^dbpav_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^glucose_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^hdlc_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^hipcirc_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^insulin_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^ldlc_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^pulse_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^sbp_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^sbpav_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^triglycerides_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^waistcirc_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^hba1c_$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^agebirth_m_y$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^agebirth_p_y$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^birth_month$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^birth_year$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^breastfed_any$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^breastfed_ever$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^child_no$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^ga_lmp$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^height_m$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^latepreg_weight$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^latepreg_weight_ga$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^mode_delivery$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^parity_m$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^preeclam$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^preg_cig$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^preg_ht$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^preg_no$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^preg_smk$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^prepreg_cig$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^prepreg_smk$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^prepreg_weight$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^sex$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^smk_t1$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^smk_t3$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^study_country$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^study_id$",
+                    "valuePattern":      "^.*$"
+                },
+                {
+                    "columnNamePattern": "^menarche_age$",
+                    "valuePattern":      "^.*$"
+                }
+            ]
+        }
+    },
+    { "name": "Node7", "type": "UploaderDataPipelineNode",
+        "config":
+        {
+            "armadilloURL": "http://127.0.0.1:8080",
+            "username":     "admin",
+            "password":     "admin",
+            "projectName":  "datashield",
+            "folderName":   "testing",
+            "tableName":    "pl_data"
+        }
+    }
+]
