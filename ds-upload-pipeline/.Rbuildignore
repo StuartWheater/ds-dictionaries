@@ -1,2 +1,4 @@
 ^pipeline_configs$
 ^pipeline_data$
+^.*\.Rproj$
+^\.Rproj\.user$

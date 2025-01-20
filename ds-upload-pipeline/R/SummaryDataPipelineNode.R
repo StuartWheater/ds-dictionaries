@@ -31,7 +31,7 @@ SummaryDataPipelineNode <- R6Class("SummaryDataPipelineNode",
         processData = function(data)
         {
             cat("Summary:\n")
-            cat("\tColumn Names:\"", colnames(data), "\"\n", sep = " ")
+            cat("\tColumn Names: \"", colnames(data), "\"\n", sep = " ")
             cat("\tLength:", nrow(data), "\n", sep = " ")
             cat("\tClass(s):", class(data), "\n", sep = " ")
 

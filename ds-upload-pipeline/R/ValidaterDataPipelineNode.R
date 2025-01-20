@@ -37,26 +37,29 @@ ValidaterDataPipelineNode <- R6Class("ValidaterDataPipelineNode",
             for (columnName in colnames(data))
             {
                 matchingColumnNamePattern <- FALSE
-                for (index in 1:length(columnSpecs))
+                if ((! is.null(columnSpecs)) && (length(columnSpecs) > 0))
                 {
-                    columnSpec        <- columnSpecs[[index]]
-                    columnNamePattern <- columnSpec$columnNamePattern[1]
-
-                    if (stringi::stri_detect(str = columnName, regex = columnNamePattern))
+                    for (index in 1:length(columnSpecs))
                     {
-                        valuePattern <- columnSpec$valuePattern[1]
+                        columnSpec        <- columnSpecs[[index]]
+                        columnNamePattern <- columnSpec$columnNamePattern[1]
 
-                        valueMismatches <- unique(setdiff(data[[columnName]], stringi::stri_match(str = data[[columnName]], regex = valuePattern)))
+                        if (stringi::stri_detect(str = columnName, regex = columnNamePattern))
+                        {
+                            valuePattern <- columnSpec$valuePattern[1]
 
-                        if (length(valueMismatches) != 0)
-                            stop("Value pattern mismatche(s) in column \"", columnName, "\": \"", paste0(valueMismatches, sep = ", "), "\"", call. = FALSE)
+                            valueMismatches <- unique(setdiff(data[[columnName]], stringi::stri_match(str = data[[columnName]], regex = valuePattern)))
 
-                        matchingColumnNamePattern <- TRUE
+                            if (length(valueMismatches) != 0)
+                                stop("Value pattern mismatche(s) in column \"", columnName, "\": \"", paste0(valueMismatches, sep = ", "), "\"", call. = FALSE)
+
+                            matchingColumnNamePattern <- TRUE
+                        }
                     }
-                }
 
-                if (! matchingColumnNamePattern)
-                    stop(paste("Unable to find a pattern matching column name \"", columnName, "\"", sep = ""), call. = FALSE)
+                    if (! matchingColumnNamePattern)
+                        stop(paste("Unable to find a pattern matching column name \"", columnName, "\"", sep = ""), call. = FALSE)
+                }
             }
 
             invisible(data)
