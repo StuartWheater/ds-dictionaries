@@ -45,12 +45,13 @@ dataPipelineBuilder <- function()
 .buildDataPipelineNode <- function(config)
 {
     dataPipeline <- switch (config$type,
-        LoaderDataPipelineNode       = LoaderDataPipelineNode$new(config$name, config$config),
-        SummaryDataPipelineNode      = SummaryDataPipelineNode$new(config$name, config$config),
-        ValidaterDataPipelineNode    = ValidaterDataPipelineNode$new(config$name, config$config),
-        FromLongLongDataPipelineNode = FromLongLongDataPipelineNode$new(config$name, config$config),
-        UploaderDataPipelineNode     = UploaderDataPipelineNode$new(config$name, config$config),
-        stop("Unknown data pipeline node type", call. = FALSE)
+        LoaderDataPipelineNode            = LoaderDataPipelineNode$new(config$name, config$config),
+        WriteTableDataPipelineNode        = WriteTableDataPipelineNode$new(config$name, config$config),
+        SummaryDataPipelineNode           = SummaryDataPipelineNode$new(config$name, config$config),
+        ValidaterDataPipelineNode         = ValidaterDataPipelineNode$new(config$name, config$config),
+        FromLongLongDataPipelineNode      = FromLongLongDataPipelineNode$new(config$name, config$config),
+        ArmadilloUploaderDataPipelineNode = ArmadilloUploaderDataPipelineNode$new(config$name, config$config),
+        stop("Unknown data pipeline node type: ", config$type, call. = FALSE)
     )
     return(dataPipeline)
 }

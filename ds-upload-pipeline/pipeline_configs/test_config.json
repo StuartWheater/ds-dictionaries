@@ -46,21 +46,27 @@
             "columnSpecs":
             [
                 {
-                    "columnNamePattern": "^1",
+                    "columnNamePattern": "^1$",
                     "valuePattern":      "^[0-9]{1,3}$"
                 },
                 {
-                    "columnNamePattern": "^2",
+                    "columnNamePattern": "^2$",
                     "valuePattern":      "^[0-9]{1,3}$"
                 },
                 {
-                    "columnNamePattern": "^3",
+                    "columnNamePattern": "^3$",
                     "valuePattern":      "^[0-9]{1,3}$"
                 }
             ]
         }
     },
-    { "name": "Node7", "type": "UploaderDataPipelineNode",
+    { "name": "Node7", "type": "WriteTableDataPipelineNode",
+        "config":
+        {
+            "filename": "output.txt"
+        }
+    },
+    { "name": "Node8", "type": "ArmadilloUploaderDataPipelineNode",
         "config":
         {
             "armadilloURL": "http://127.0.0.1:8080",

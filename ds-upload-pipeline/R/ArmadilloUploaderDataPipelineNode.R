@@ -1,7 +1,7 @@
 #'
-#' @title Uploader Data Pipeline Node R6Class
+#' @title Armadillo Uploader Data Pipeline Node R6Class
 #' 
-#' @description `UploaderDataPipelineNode` is an R6Class which support the uploading of data which passes to the `processData` function by the previous node in the pipeline.
+#' @description `ArmadilloUploaderDataPipelineNode` is an R6Class which support the uploading of data which passes to the `processData` function by the previous node in the pipeline.
 #' 
 #' @details
 #' TODO
@@ -11,7 +11,7 @@
 #' @export
 #'
 
-UploaderDataPipelineNode <- R6Class("UploaderDataPipelineNode",
+ArmadilloUploaderDataPipelineNode <- R6Class("ArmadilloUploaderDataPipelineNode",
     inherit = DataPipelineNode,
 
     public = list
