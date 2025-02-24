@@ -14,14 +14,6 @@ import * as Blockly from 'blockly/core';
   {
     mounted()
     {
-      console.log('Before Block');
-      // LoaderData
-      // WriteTable
-      // Summary
-      // Validater
-      // FromLongLong
-      // ArmadilloUploader
-
       Blockly.Blocks['upload_pipeline'] =
       {
         init: function()
@@ -39,6 +31,7 @@ import * as Blockly from 'blockly/core';
         }
       };
 
+      // LoaderData step
       Blockly.Blocks['loader_data'] =
       {
         init: function()
@@ -56,6 +49,7 @@ import * as Blockly from 'blockly/core';
         }
       };
 
+      // WriteTable step
       Blockly.Blocks['write_table'] =
       {
         init: function()
@@ -73,6 +67,7 @@ import * as Blockly from 'blockly/core';
         }
       };
 
+      // Summary step
       Blockly.Blocks['summary'] =
       {
         init: function()
@@ -87,6 +82,7 @@ import * as Blockly from 'blockly/core';
         }
       };
 
+      // Validater step
       Blockly.Blocks['validater'] =
       {
         init: function()
@@ -104,6 +100,7 @@ import * as Blockly from 'blockly/core';
         }
       };
 
+      // FromLongLong step
       Blockly.Blocks['from_long_long'] =
       {
         init: function()
@@ -127,6 +124,7 @@ import * as Blockly from 'blockly/core';
         }
       };
 
+      // ArmadilloUploader step
       Blockly.Blocks['armadillo_uploader'] =
       {
         init: function()
@@ -179,6 +177,18 @@ import * as Blockly from 'blockly/core';
           this.setNextStatement(true, "COLUMNSPEC");
           this.setColour(270);
           this.setTooltip('Column Spec: Validation node');
+        }
+      };
+
+      Blockly.Blocks['string_input'] =
+      {
+        init: function()
+        {
+          this.appendDummyInput()
+              .appendField('text input:')
+              .appendField(new Blockly.FieldTextInput("default text"), 'FIELDNAME');
+          this.setOutput(true, "String");
+          this.setColour(30);
         }
       };
 
@@ -247,7 +257,7 @@ import * as Blockly from 'blockly/core';
               [
                 {
                   "kind": "block",
-                  "type": "math_number"
+                  "type": "string_input"
                 }
               ]
             }
