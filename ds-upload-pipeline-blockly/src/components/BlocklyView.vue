@@ -110,6 +110,15 @@ import * as Blockly from 'blockly/core';
         {
           this.appendDummyInput()
               .appendField('From Long Long to Wide');
+          this.appendValueInput('ColumnNameColumnName')
+              .setCheck('String')
+              .appendField('column name column name');
+          this.appendValueInput('RowNameColumnName')
+              .setCheck('String')
+              .appendField('row name column name');
+          this.appendValueInput('ValueColumnName')
+              .setCheck('String')
+              .appendField('value column name');
           this.setPreviousStatement(true, "STEP");
           this.setOutput(false);
           this.setNextStatement(true, "STEP");
